@@ -8,7 +8,7 @@ public class VRInitialMenu : MonoBehaviour
     public GameObject[] spawnableObjects;
     public Transform menuSpawnPoint;
     public GameObject menuUIPrefab;
-
+    public GameObject buttonPrefab;
     [Header("Input Actions")]
     public InputActionReference primaryButtonAction;
 
@@ -59,13 +59,13 @@ public class VRInitialMenu : MonoBehaviour
 
     private void PopulateMenu(GameObject menuInstance)
     {
-        GameObject buttonPrefab = Resources.Load<GameObject>("UI/ButtonPrefab");
+        // GameObject buttonPrefab = Resources.Load<GameObject>("UI/ButtonPrefab");
 
-        if (buttonPrefab == null)
-        {
-            Debug.LogError("ButtonPrefab could not be loaded! Ensure it is placed in 'Assets/Resources/UI/'");
-            return;
-        }
+        // if (buttonPrefab == null)
+        // {
+        //     Debug.LogError("ButtonPrefab could not be loaded! Ensure it is placed in 'Assets/Resources/UI/'");
+        //     return;
+        // }
 
         // Find the Panel inside the menuInstance where buttons should be placed
         Transform menuPanel = FindDeepChild(menuInstance.transform, "Panel");
