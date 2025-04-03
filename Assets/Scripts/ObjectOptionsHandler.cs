@@ -35,6 +35,8 @@ public class ObjectOptionsHandler : MonoBehaviour
     private GameObject targetObject;
     private Vector3 selectedScaleAxis = Vector3.one;
     private Vector3 selectedRotateAxis = Vector3.up;
+
+    private bool duplicateOnce = false;
     
     private void OnEnable()
     {
@@ -144,6 +146,15 @@ public class ObjectOptionsHandler : MonoBehaviour
 
     private void DuplicateObject()
     {
-        Instantiate(targetObject, targetObject.transform.position + Vector3.up * 2f, targetObject.transform.rotation);
+        if (duplicateOnce == false)
+        {
+            Instantiate(targetObject, targetObject.transform.position + Vector3.up * 2f, targetObject.transform.rotation);
+        }
+        else
+        {
+
+        }
+        duplicateOnce = true;
+
     }
 }

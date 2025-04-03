@@ -125,7 +125,7 @@ public class VRCombinedInteraction : MonoBehaviour
     private void ShowObjectOptions(GameObject obj)
     {
         optionsMenuUI.SetActive(true);
-        optionsMenuUI.transform.position = obj.transform.position + Vector3.up * 0.5f;
+        optionsMenuUI.transform.position = obj.transform.position + Vector3.up * 2f;
         optionsMenuUI.transform.LookAt(Camera.main.transform);
 
         var optionsHandler = optionsMenuUI.GetComponent<ObjectOptionsHandler>();
@@ -141,11 +141,12 @@ public class VRCombinedInteraction : MonoBehaviour
         grabbedObject = obj;
 
         Rigidbody rb = grabbedObject.GetComponent<Rigidbody>();
+
         if (rb != null)
         {
             rb.isKinematic = true;
         }
-
+     
         grabbedObject.transform.SetParent(rightControllerTransform);
     }
 
