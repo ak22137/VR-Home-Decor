@@ -36,6 +36,7 @@ public class VRInitialMenu : MonoBehaviour
             isPrimaryButtonPressed = true;
             ToggleMenu();
         }
+        Debug.Log("Primary trigger is pressed");
     }
 
     private void OnPrimaryButtonReleased(InputAction.CallbackContext context)
