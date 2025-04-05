@@ -119,19 +119,19 @@ public class ObjectOptionsHandler : MonoBehaviour
 
     private void UpdateScaleText()
     {
-        if (targetObject != null && scaleText != null)
-        {
-            scaleText.text = $"Scale: X={targetObject.transform.localScale.x:F2}, Y={targetObject.transform.localScale.y:F2}, Z={targetObject.transform.localScale.z:F2}";
-        }
+        // if (targetObject != null && scaleText != null)
+        // {
+        //     scaleText.text = $"{targetObject.transform.localScale.x:F2},{targetObject.transform.localScale.y:F2},{targetObject.transform.localScale.z:F2}";
+        // }
     }
     
     private void UpdateRotationText()
     {
-        if (targetObject != null && rotationText != null)
-        {
-            Vector3 rotation = targetObject.transform.eulerAngles;
-            rotationText.text = $"Rotation: X={rotation.x:F2}, Y={rotation.y:F2}, Z={rotation.z:F2}";
-        }
+        // if (targetObject != null && rotationText != null)
+        // {
+        //     Vector3 rotation = targetObject.transform.eulerAngles;
+        //     rotationText.text = $"{rotation.x:F2},{rotation.y:F2},{rotation.z:F2}";
+        // }
     }
     
     private void OnTriggerPressed(InputAction.CallbackContext context)

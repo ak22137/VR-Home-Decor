@@ -146,7 +146,7 @@ public class VRCombinedInteraction : MonoBehaviour
         {
             rb.isKinematic = true;
         }
-     
+
         grabbedObject.transform.SetParent(rightControllerTransform);
     }
 

@@ -116,7 +116,20 @@ public class VRInitialMenu : MonoBehaviour
     }
     private void SpawnObject(GameObject obj)
     {
-        var spawnPosition = Camera.main.transform.position + Camera.main.transform.forward * 2f;
-        Instantiate(obj, spawnPosition, Quaternion.identity);
+        
+        var spawnPosition = Camera.main.transform.position + Camera.main.transform.forward * 3f;
+
+       
+        GameObject spawnedObject = Instantiate(obj, spawnPosition, Quaternion.identity);
+
+        
+        Rigidbody rb = spawnedObject.GetComponent<Rigidbody>();
+        if (rb == null)
+        {
+            rb = spawnedObject.AddComponent<Rigidbody>();
+        }
+
+       
+        rb.isKinematic = false;
     }
 }
