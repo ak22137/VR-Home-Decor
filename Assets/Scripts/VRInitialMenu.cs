@@ -69,7 +69,7 @@ public class VRInitialMenu : MonoBehaviour
         // }
 
         // Find the Panel inside the menuInstance where buttons should be placed
-        Transform menuPanel = FindDeepChild(menuInstance.transform, "Panel");
+        Transform menuPanel = FindDeepChild(menuInstance.transform, "PanelOfObjects");
         if (menuPanel == null)
         {
             Debug.LogError("Menu instance is missing a 'Panel' child object!");
